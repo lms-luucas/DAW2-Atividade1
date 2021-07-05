@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./script.js"></script>
+
+    <title>DAW 01</title>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <legend>Automoveis</legend>
+        <form id="form-cars" onsubmit="storeCar(event)">
+          <div class="form-group">
+            <label for="id">ID</label>
+            <input
+              class="form-control"
+              type="text"
+              name="id"
+              id="id"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <label for="marca">Marca</label>
+            <input class="form-control" type="text" name="marca" id="marca" />
+          </div>
+          <div class="form-group">
+            <label for="modelo">Modelo</label>
+            <input class="form-control" type="text" name="modelo" id="modelo" />
+          </div>
+          <div class="form-group">
+            <label for="cor">Cor</label>
+            <input class="form-control" type="text" name="cor" id="cor" />
+          </div>
+          <div class="form-group">
+            <label for="placa">Placa</label>
+            <input class="form-control" type="text" name="placa" id="placa" />
+          </div>
+          <div class="form-group">
+            <label for="ano_fabricacao">Ano de Fabricação</label>
+            <input
+              class="form-control"
+              type="text"
+              name="ano_fabricacao"
+              id="ano_fabricacao"
+            />
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-success" type="submit">Enviar</button>
+            <button class="btn btn-primary" type="reset">Limpar</button>
+          </div>
+        </form>
+      </fieldset>
+      <fieldset>
+        <legend>Veiculos Cadastrados</legend>
+        <div class="content">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Placa</th>
+                <th>Cor</th>
+                <th>Ano de Fabricação</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </fieldset>
+    </div>
+  </body>
+</html>
